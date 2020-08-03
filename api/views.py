@@ -1,3 +1,22 @@
-from django.shortcuts import render
+from rest_framework import generics
+from costs.models import Expense
+from .permissions import IsAuthorOrAdmin
 
-# Create your views here.
+from .serializers import ExpenseSerializer
+
+
+class ExpenseList(generics.ListCreateAPIView):
+
+    queryset = Expense.objects.all()
+
+    serializer_class = ExpenseSerializer
+
+
+class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
+
+    permission_classes = (IsAuthorOrAdmin,)
+
+    queryset = Expense.objects.all()
+
+    serializer_class = ExpenseSerializer
+
