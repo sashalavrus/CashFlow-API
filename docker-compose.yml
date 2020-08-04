@@ -1,5 +1,6 @@
 version: "3"
 
+
 services:
    app:
       build:
@@ -8,6 +9,8 @@ services:
       - "8000:8000"
       volumes:
       - .:/app
+      env_file:
+        - .env
       environment:
         - DATABASE_PASSWORD="${DATABASE_PASSWORD}"
         - EMAIL_HOST_USER="${EMAIL_HOST_USER}"
