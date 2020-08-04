@@ -8,5 +8,10 @@ services:
       - "8000:8000"
       volumes:
       - .:/app
+      environment:
+        - DATABASE_PASSWORD="${DATABASE_PASSWORD}"
+        - EMAIL_HOST_USER="${EMAIL_HOST_USER}"
+        - EMAIL_HOST_PASSWORD="${EMAIL_HOST_PASSWORD}"
+        - SECRET_KEY="${SECRET_KEY}"
       command: >
         sh -c "python manage.py runserver 0.0.0.0:8000"

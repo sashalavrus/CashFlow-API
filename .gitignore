@@ -114,3 +114,4 @@ costs/migrations/
 .idea/
 
 set
+.env
