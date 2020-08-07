@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.utils import timezone
-from .models import Expense
+from costs.models import Expense
 import datetime
 
 

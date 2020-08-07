@@ -98,11 +98,10 @@ WSGI_APPLICATION = 'CashFlow.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'cashflow',
-        'USER': 'laviss',
-        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': os.getenv('DB_NAME') or 'cashflow',
+        'USER': os.getenv('DB_USER') or 'laviss',
+        'PASSWORD': os.getenv('DB_PASS'),
+        'HOST': os.getenv('DB_HOST') or 'localhost',
     }
 }
 

@@ -5,7 +5,7 @@ import datetime
 
 
 class Expense(models.Model):
-    ''' Class Expense. Contain information about user costs'''
+    """ Class Expense. Contain information about user costs"""
 
     DEFAULT = 'DF'
     FOOD = 'FD'
@@ -26,8 +26,8 @@ class Expense(models.Model):
     pub_date = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    # class Meta:
-    # ordering = '-pub_date'
+    class Meta:
+        ordering = ['pub_date']
 
     def __str__(self):
         return f'{self.amount}, in {self.pub_date}'
