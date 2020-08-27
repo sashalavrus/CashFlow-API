@@ -5,6 +5,11 @@ from .permissions import IsAuthorOrAdmin
 from .serializers import ExpenseSerializer
 
 
+class ExpenseCreate(generics.CreateAPIView):
+
+    serializer_class = ExpenseSerializer
+
+
 class ExpenseList(generics.ListCreateAPIView):
 
     queryset = Expense.objects.all()
