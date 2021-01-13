@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export SECRET_KEY='5a3qrd!a*hhl!=3k(e@nq@1+7-0*#^8i&txm-(339(#jelkxq#'
+echo All is Done!
