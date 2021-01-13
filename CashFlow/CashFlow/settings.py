@@ -71,7 +71,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'cashflow_db',
         'CLIENT': {
-            'host': 'ab1b557ab555',
+            'host': os.getenv('DB_HOST') or 'localhost',
             'port': 27017,
         }
     }

@@ -36,8 +36,3 @@ class ModelTests(TestCase):
                 #username=self.username,
                 #email=None,
                 #password=self.password)
-
-
-
-
-
