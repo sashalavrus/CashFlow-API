@@ -113,7 +113,7 @@ costs/migrations/
 
 .idea/
 
-CashFlow/set
+set
 .env
 .gitsecret/keys/random_seed
 !*.secret
